@@ -5,25 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Menu Hover Animation</title>
+    <title>Real Glass Morphism</title>
   </head>
   <body>
-    <ul>
-      <li style="--clr: #00abe1">
-        <a href="#" data-text="&nbsp;Home">&nbsp;Home&nbsp;</a>
-      </li>
-      <li style="--clr: #ff6493">
-        <a href="#" data-text="&nbsp;About">&nbsp;About&nbsp;</a>
-      </li>
-      <li style="--clr: #ffdd1c">
-        <a href="#" data-text="&nbsp;Service">&nbsp;Service&nbsp;</a>
-      </li>
-      <li style="--clr: #00dc82">
-        <a href="#" data-text="&nbsp;Team">&nbsp;Team&nbsp;</a>
-      </li>
-      <li style="--clr: #dc00d4">
-        <a href="#" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
-      </li>
-    </ul>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <h2>01</h2>
+          <h3>Card One</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            accusamus possimus ut id, veritatis et maiores expedita, aliquam,
+            reiciendis consectetur excepturi.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>02</h2>
+          <h3>Card Two</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            accusamus possimus ut id, veritatis et maiores expedita, aliquam,
+            reiciendis consectetur excepturi.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>03</h2>
+          <h3>Card Three</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            accusamus possimus ut id, veritatis et maiores expedita, aliquam,
+            reiciendis consectetur excepturi.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.6,
+      });
+    </script>
   </body>
 </html>
