@@ -5,30 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Image Hover Effect</title>
+    <title>Starbucks Landing Page</title>
   </head>
   <body>
-    <div class="card">
-      <div class="imgBx">
-        <img
-          src="https://images.pexels.com/photos/936559/pexels-photo-936559.jpeg?cs=srgb&dl=pexels-mentatdgt-936559.jpg&fm=jpg"
-          alt=""
-        />
-      </div>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="./images/logo.png" alt="" class="logo" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Wat's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
       <div class="content">
-        <div class="details">
-          <h2>Johannes Vermeer<br /><span>Senior UX/UI Designer</span></h2>
-          <div class="data">
-            <h3>342<br /><span>Posts</span></h3>
-            <h3>120k<br /><span>Followers</span></h3>
-            <h3>285<br /><span>Following</span></h3>
-          </div>
-          <div class="actionBtn">
-            <button>Follow</button>
-            <button>Message</button>
-          </div>
+        <div class="textBox">
+          <h2>It's not just Coffee<br />It's <span>Starbucks</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            ut aperiam laudantium dolor cumque. Placeat amet, a nisi harum
+            reprehenderit praesentium, ab, aspernatur molestiae doloremque
+            voluptate eius sapiente ipsam omnis.
+          </p>
+          <a href="#">Lean More</a>
+        </div>
+        <div class="imgBox">
+          <img src="./images/img1.png" class="starbucks" alt="" />
         </div>
       </div>
-    </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="./images/thumb1.png"
+            alt=""
+            onclick="imgSlider('./images/img1.png');changeCircleColor('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="./images/thumb2.png"
+            alt=""
+            onclick="imgSlider('./images/img2.png');changeCircleColor('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="./images/thumb3.png"
+            alt=""
+            onclick="imgSlider('./images/img3.png');changeCircleColor('#d752b1')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="./images/facebook.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/twitter.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/instagram.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
   </body>
 </html>
