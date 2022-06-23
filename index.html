@@ -8,76 +8,29 @@
     <title>Starbucks Landing Page</title>
   </head>
   <body>
-    <section>
-      <div class="circle"></div>
-      <header>
-        <a href="#"><img src="./images/logo.png" alt="" class="logo" /></a>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Wat's New</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </header>
-      <div class="content">
-        <div class="textBox">
-          <h2>It's not just Coffee<br />It's <span>Starbucks</span></h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            ut aperiam laudantium dolor cumque. Placeat amet, a nisi harum
-            reprehenderit praesentium, ab, aspernatur molestiae doloremque
-            voluptate eius sapiente ipsam omnis.
-          </p>
-          <a href="#">Lean More</a>
+    <div class="container">
+      <div class="card">
+        <div class="sneaker">
+          <div class="circle"></div>
+          <img src="./adidas.png" alt="adidas" />
         </div>
-        <div class="imgBox">
-          <img src="./images/img1.png" class="starbucks" alt="" />
+        <div class="info">
+          <h1 class="title">Adidas ZX</h1>
+          <h3>
+            FUTURE-READY TRAINERS WITH WRAPPED BOOST FOR EXCEPTION COMFORT.
+          </h3>
+          <div class="sizes">
+            <button>39</button>
+            <button>40</button>
+            <button class="active">42</button>
+            <button>44</button>
+          </div>
+          <div class="purchase">
+            <button>Purchase</button>
+          </div>
         </div>
       </div>
-      <ul class="thumb">
-        <li>
-          <img
-            src="./images/thumb1.png"
-            alt=""
-            onclick="imgSlider('./images/img1.png');changeCircleColor('#017143')"
-          />
-        </li>
-        <li>
-          <img
-            src="./images/thumb2.png"
-            alt=""
-            onclick="imgSlider('./images/img2.png');changeCircleColor('#eb7495')"
-          />
-        </li>
-        <li>
-          <img
-            src="./images/thumb3.png"
-            alt=""
-            onclick="imgSlider('./images/img3.png');changeCircleColor('#d752b1')"
-          />
-        </li>
-      </ul>
-      <ul class="sci">
-        <li>
-          <a href="#"><img src="./images/facebook.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="./images/twitter.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="./images/instagram.png" alt="" /></a>
-        </li>
-      </ul>
-    </section>
-    <script type="text/javascript">
-      function imgSlider(anything) {
-        document.querySelector(".starbucks").src = anything;
-      }
-
-      function changeCircleColor(color) {
-        const circle = document.querySelector(".circle");
-        circle.style.background = color;
-      }
-    </script>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>

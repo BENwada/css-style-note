@@ -3,158 +3,97 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
-}
-
-section {
-  position: relative;
-  width: 100%;
   min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-}
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  position: relative;
-  max-width: 80px;
-}
-
-header ul {
-  position: relative;
-  display: flex;
-}
-
-header ul li {
-  list-style: none;
-}
-
-header ul li a {
-  display: inline-block;
-  color: #333;
-  font-weight: 400;
-  margin-left: 40px;
-  text-decoration: none;
-}
-
-.content {
-  position: relative;
-  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
-.content .textBox {
-  position: relative;
-  max-width: 600px;
-}
-
-.content .textBox h2 {
-  color: #333;
-  font-size: 4em;
-  line-height: 1.4em;
-  font-weight: 500;
-}
-
-.content .textBox h2 span {
-  color: #017413;
-  font-size: 1.2em;
-  font-weight: 900;
-}
-
-.content .textBox p {
-  color: #333;
-}
-
-.content .textBox a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 8px 20px;
-  background: #017143;
-  color: #fff;
-  border-radius: 40px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-.content .imgBox {
-  width: 600px;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
-  margin-top: 50px;
-}
-
-.content .imgBox img {
-  max-width: 350px;
-}
-
-.thumb {
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.thumb li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.thumb li:hover {
-  transform: translateY(-15px);
-}
-
-.thumb li img {
-  max-width: 60px;
-}
-
-.sci {
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
+.container {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  perspective: 1000px;
+  z-index: 0;
+}
+.card {
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  width: 35rem;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
-.sci li {
-  list-style: none;
+.sneaker {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.sci li a {
-  display: inline-block;
-  margin: 5px 0;
-  transform: scale(0.6);
-  filter: invert(1);
+.sneaker img {
+  width: 20rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
 }
-
 .circle {
+  width: 15rem;
+  height: 15rem;
+  background: linear-gradient(
+    to right,
+    rgba(245, 70, 66, 0.75),
+    rgba(8, 83, 156, 0.75)
+  );
   position: absolute;
-  top: 0;
-  left: 0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.info h1 {
+  font-size: 3rem;
+  transition: all 0.75s ease-out;
+}
+.info h3 {
+  font-size: 1.3rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+}
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+}
+.sizes button {
+  padding: 0.5rem 2rem;
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+}
+button.active {
+  background: #585858;
+  color: white;
+}
+.purchase {
+  margin-top: 5rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
   width: 100%;
-  height: 100%;
-  background: #017143;
-  clip-path: circle(600px at right 800px);
+  padding: 1rem 0rem;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
 }
